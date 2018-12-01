@@ -339,4 +339,11 @@ ui bootstrap tweaks
 
 
 
+/* ==========================================================================
+Fix error field display
+========================================================================== */
+.form-group .help-block {
+    position: static;
+}
+
 /* jhipster-needle-css-add-main JHipster will add new css style */

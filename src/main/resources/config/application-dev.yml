@@ -16,7 +16,7 @@
 spring:
     profiles:
         active: dev
-        include: swagger
+        include: swagger, no-liquibase
     devtools:
         restart:
             enabled: true
@@ -28,7 +28,7 @@ spring:
         type: com.zaxxer.hikari.HikariDataSource
         url: jdbc:postgresql://localhost:5432/parkske
         username: parkske
-        password:
+        password: 12345
     jpa:
         database-platform: io.github.jhipster.domain.util.FixedPostgreSQL82Dialect
         database: POSTGRESQL
