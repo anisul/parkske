@@ -1,0 +1,14 @@
+version: '2'
+services:
+    parkske-app:
+        image: parkske
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://parkske-postgresql:5432/parkske
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+        ports:
+            - 8080:8080
+    parkske-postgresql:
+        extends:
+            file: postgresql.yml
+            service: parkske-postgresql
